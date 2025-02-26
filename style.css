@@ -1,0 +1,92 @@
+/*Logo Slider*/
+.marquee-button {
+    position: relative;
+    max-width: 1016px !important;
+    margin: auto;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    border-radius: 10px;
+    border-radius: 1rem;
+    background-color: #fff;
+    overflow: hidden;
+    box-shadow: 0 14px 80px #f0217324;
+
+}
+
+.marquee-button::after {
+    content: "";
+    z-index: 1;
+    background-image: linear-gradient(90deg, #fff, #83838300);
+    width: 15%;
+    position: absolute;
+    inset: 0% auto 0% 0%;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.marquee-button::before {
+    content: "";
+    z-index: 1;
+    background-image: linear-gradient(270deg, #fff, #9c9c9c00);
+    width: 15%;
+    position: absolute;
+    inset: 0% 0% 0% auto;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.marquee-track-button {
+    white-space: nowrap;
+    will-change: transform;
+    animation: marquee 300s linear infinite;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    position: relative;
+}
+
+
+
+.marquee-track-button-content {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    fill: none;
+    stroke: transparent;
+    stroke-width: 87;
+    padding: 20px;
+}
+
+.marquee-image-box {
+    width: 220px;
+    height: 100%;
+}
+
+.marquee-image-box img {
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .marquee-image-box {
+        width: 120px;
+        height: 100%;
+    }
+}
+
+/*Logo Slider*/
